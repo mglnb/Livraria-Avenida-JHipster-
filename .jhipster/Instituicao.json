@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "senha",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telefone",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170618172714",
+    "entityTableName": "instituicao",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no"
+}

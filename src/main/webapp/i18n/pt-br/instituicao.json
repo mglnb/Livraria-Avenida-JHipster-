@@ -1,0 +1,24 @@
+{
+    "jHipsterProjectApp": {
+        "instituicao" : {
+            "home": {
+                "title": "Instituicaos",
+                "createLabel": "Criar novo Instituicao",
+                "createOrEditLabel": "Criar ou editar Instituicao"
+            },
+            "created": "Um novo Instituicao foi criado com o identificador {{ param }}",
+            "updated": "Um Instituicao foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Instituicao foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Instituicao {{ id }}?"
+            },
+            "detail": {
+                "title": "Instituicao"
+            },
+            "nome": "Nome",
+            "email": "Email",
+            "senha": "Senha",
+            "telefone": "Telefone"
+        }
+    }
+}

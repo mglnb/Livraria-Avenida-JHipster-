@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "livro",
+            "otherEntityName": "instituicao",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isbn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ano",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "edicao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "editora",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170618172716",
+    "entityTableName": "livro",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no"
+}

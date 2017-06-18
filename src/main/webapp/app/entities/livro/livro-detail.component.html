@@ -1,0 +1,48 @@
+<div class="container">
+<div *ngIf="livro">
+    <h2><span jhiTranslate="jHipsterProjectApp.livro.detail.title">Livro</span> {{livro.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="jHipsterProjectApp.livro.nome">Nome</span></dt>
+        <dd>
+            <span>{{livro.nome}}</span>
+        </dd>
+        <dt><span jhiTranslate="jHipsterProjectApp.livro.isbn">Isbn</span></dt>
+        <dd>
+            <span>{{livro.isbn}}</span>
+        </dd>
+        <dt><span jhiTranslate="jHipsterProjectApp.livro.ano">Ano</span></dt>
+        <dd>
+            <span>{{livro.ano}}</span>
+        </dd>
+        <dt><span jhiTranslate="jHipsterProjectApp.livro.edicao">Edicao</span></dt>
+        <dd>
+            <span>{{livro.edicao}}</span>
+        </dd>
+        <dt><span jhiTranslate="jHipsterProjectApp.livro.editora">Editora</span></dt>
+        <dd>
+            <span>{{livro.editora}}</span>
+        </dd>
+        <dt><span jhiTranslate="jHipsterProjectApp.livro.livro">Livro</span></dt>
+        <dd>
+            <div *ngIf="livro.livro">
+                <a [routerLink]="['/instituicao', livro.livro?.id]">{{livro.livro?.nome}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'livro/'+ livro.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
+</div>
