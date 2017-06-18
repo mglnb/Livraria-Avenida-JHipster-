@@ -1,155 +1,140 @@
-# JHipsterProject
-This application was generated using JHipster 4.5.4, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v4.5.4](https://jhipster.github.io/documentation-archive/v4.5.4).
+# Livraria Avenida
+Essa aplicação foi gerada usando JHipster 4.5.4, voce pode encontrar a documentação e ajuda em [https://jhipster.github.io/documentation-archive/v4.5.4](https://jhipster.github.io/documentation-archive/v4.5.4).
 
-## Development
+## Desenvolvimento
 
-Before you can build this project, you must install and configure the following dependencies on your machine:
+Antes que você possa compilar este projeto voce deve instalar e configurar as seguintes dependências em sua máquina:
 
-1. [Node.js][]: We use Node to run a development web server and build the project.
-   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
-2. [Yarn][]: We use Yarn to manage Node dependencies.
-   Depending on your system, you can install Yarn either from source or as a pre-packaged bundle.
+1. [Node.js](https://nodejs.org/en/): Nós usamos o Node para rodar um server de desenvolvimento web e compilar o projeto.
 
-After installing Node, you should be able to run the following command to install development tools.
-You will only need to run this command when dependencies change in [package.json](package.json).
+2. [Yarn](https://yarnpkg.com/pt-BR/): Nós usamos o Yarn para gerenciar as dependências do Node.
 
-    yarn install
+3. [Git](https://git-scm.com/): Para manter o controle de versão, e o terminal do git traz algumas vantagens que comentarei logo.
 
-We use yarn scripts and [Webpack][] as our build system.
+4. [Yeoman](http://yeoman.io/learning/index.html): Serve como o gerador de _scaffolding_ do projeto. Permite a gerar rapidamente novos projetos.
+
+Após instalar o Node, você já tem a possibilidade de rodar os seguintes comandos para instalar as ferramentas de desenvolvimentos. 
+
+## Iniciando o projeto 
+Para instalar o gerador do JHipster, use este comando:
+
+    yarn global add generator-jhipster
+
+Logo que instalado já tens a possibilidade de rodar o comando `jhipster`.  
+Crie uma pasta para armazenar o projeto.
+
+    mkdir LivrariaAvenida
+    cd LivrariaAvenida
+
+Rode o comando `jhipster` e siga as instruções imprimidas na tela.
+
+    (1/16) Which *type* of application would you like to create? 
+
+Qual o tipo de aplicação você gostaria de criar? `Monolithic application (recommended for simple projects)`
+
+    (2/16) What is the base name of your application? 
+      
+Qual vai ser o nome da sua aplicação? `LivrariaAvenida`
+
+     (3/16) What is your default Java package name? 
+ 
+Qual vai ser o nome da _package_ padrão do seu projeto? `br.com.livrariaavenida`
+ 
+    (4/16) Do you want to use the JHipster Registry to configure, monitor and scale your application? 
+ 
+Você deseja usar o `JHipster Registry` para configurar, monitorar, comparar sua aplicação? `Yes`  
+ 
+    (5/16) Which *type* of database would you like to use? 
+ 
+Qual tipo de banco de dados você irá utilizar? `SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle, MSSQL)`
+ 
+    (6/16) Which *production* database would you like to use?
+
+Qual tipo de banco de dados você irá utilizar na produção? `MySQL`
+
+    (7/16) Which *development* database would you like to use?
+    
+Qual tipo de banco de dados você irá utilizar no desenvolvimento? `H2 with disk-based persistence`
+    
+    (8/16) Do you want to use Hibernate 2nd level cache? 
+    
+Você deseja utilizar o 2º level de cache do Hibernate? `Yes, with ehcache (local cache, for a single node)`
+    
+    (9/16) Would you like to use Maven or Gradle for building the backend?
+   
+Você gostaria de utilizar `Maven` ou `Gradle` para compilar o _back-end_? `Maven`
+   
+    (10/16) Which other technologies would you like to use? (Press <space> to select, <a> to toggle all, <i> to inverse selection)
+   
+Que outras tecnologias você gostaria de usar? (Pressione `<espaço>` para selecionar, `<a>` para selecionar todos, `<i>` para inverter a seleção)   
+   
+    (11/16) Which *Framework* would you like to use for the client?
+    
+Que framework você gostaria de utilizar para o _front-end_? `Angular 4 (BETA)`
+    
+    (12/16) Would you like to use the LibSass stylesheet preprocessor for your CSS? 
+    
+Você gostaria de utilizar o SASS como pré-processador para seu CSS? `Yes`
+    
+    (13/16) Would you like to enable internationalization support?
+     
+Você gostaria de ativar o suporte a internacionalização `Yes`
+     
+    Please choose the native language of the application:
+    
+Por favor, selecione o idioma nativo da aplicação: `Portuguess (Brazil)`
+    
+    Please choose additional languages to install (Press <space> to select, <a> to toggle all, <i> to inverse selection)
+ 
+Por favor, selecione idiomas adicionas para serem instalados (Pressione `<espaço>` para selecionar, `<a>` para selecionar todos, `<i>` para inverter a seleção)   
+ 
+    (14/16) Besides JUnit and Karma, which testing frameworks would you like to use? 
+    
+Além do JUnit e do Karma, qual framework de teste você gostaria de utilizar?    
+    
+    (15/16) Would you like to install other generators from the JHipster Marketplace? 
+
+Gostaria de instalar outros geradores disponiveis na `JHipster Marketplace` ?
 
 
-Run the following commands in two separate terminals to create a blissful development experience where your browser
-auto-refreshes when files change on your hard drive.
+Após responder estas perguntas, ele irá começar a gerar o projeto.
+
+## Rodando o projeto
+
+Para rodar o projeto no Windows, abra o Git Bash, vá até a pasta do projeto e digite
 
     ./mvnw
+
+Assim irá rodar o _server-side_ do aplicativo, caso queira editar algum compontente cliente-side que necessite compilar o typescript, utilize também
+
     yarn start
-
-[Yarn][] is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
-specifying a newer version in [package.json](package.json). You can also run `yarn update` and `yarn install` to manage dependencies.
-Add the `help` flag on any command to see how you can use it. For example, `yarn help update`.
-
-The `yarn run` command will list all of the scripts available to run for this project.
-
-### Managing dependencies
-
-For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
-
-    yarn add --exact leaflet
-
-To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
-
-    yarn add --dev --exact @types/leaflet
-
-Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
-
-Edit [src/main/webapp/app/vendor.ts](src/main/webapp/app/vendor.ts) file:
-~~~
-import 'leaflet/dist/leaflet.js';
-~~~
-
-Edit [src/main/webapp/content/css/vendor.css](src/main/webapp/content/css/vendor.css) file:
-~~~
-@import '~leaflet/dist/leaflet.css';
-~~~
-
-Note: there are still few other things remaining to do for Leaflet that we won't detail here.
-
-For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
-
-### Using angular-cli
-
-You can also use [Angular CLI][] to generate some custom client code.
-
-For example, the following command:
-
-    ng generate component my-component
-
-will generate few files:
-
-    create src/main/webapp/app/my-component/my-component.component.html
-    create src/main/webapp/app/my-component/my-component.component.ts
-    update src/main/webapp/app/app.module.ts
-
-## Building for production
-
-To optimize the JHipsterProject application for production, run:
-
-    ./mvnw -Pprod clean package
-
-This will concatenate and minify the client CSS and JavaScript files. It will also modify `index.html` so it references these new files.
-To ensure everything worked, run:
-
-    java -jar target/*.war
-
-Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
-
-Refer to [Using JHipster in production][] for more details.
-
-## Testing
-
-To launch your application's tests, run:
-
-    ./mvnw clean test
-
-### Client tests
-
-Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in [src/test/javascript/](src/test/javascript/) and can be run with:
-
-    yarn test
+    
+E deixe os dois servers rodando para fazer as modificações.
 
 
-### Other tests
 
-Performance tests are run by [Gatling][] and written in Scala. They're located in [src/test/gatling](src/test/gatling) and can be run with:
 
-    ./mvnw gatling:execute
 
-For more information, refer to the [Running tests page][].
+## Informações Adicionais
 
-## Using Docker to simplify development (optional)
+Alguns links do JHipster
 
-You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
-For example, to start a mysql database in a docker container, run:
+[JHipster]( https://jhipster.github.io)  
+[JHipster 4.5.4](https://jhipster.github.io/documentation-archive/v4.5.4)
 
-    docker-compose -f src/main/docker/mysql.yml up -d
+[Usando JHipster para desenvolvimento](https://jhipster.github.io/documentation-archive/v4.5.4/development/)  
+[Usando Docker e Docker-Compose](https://jhipster.github.io/documentation-archive/v4.5.4/docker-compose)  
+[Usando JHipster para produção](https://jhipster.github.io/documentation-archive/v4.5.4/production/)  
+[Rodando paginas de teste](https://jhipster.github.io/documentation-archive/v4.5.4/running-tests/)  
 
-To stop it and remove the container, run:
-
-    docker-compose -f src/main/docker/mysql.yml down
-
-You can also fully dockerize your application and all the services that it depends on.
-To achieve this, first build a docker image of your app by running:
-
-    ./mvnw package -Pprod docker:build
-
-Then run:
-
-    docker-compose -f src/main/docker/app.yml up -d
-
-For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`jhipster docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
-
-## Continuous Integration (optional)
-
-To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
-
-[JHipster Homepage and latest documentation]: https://jhipster.github.io
-[JHipster 4.5.4 archive]: https://jhipster.github.io/documentation-archive/v4.5.4
-
-[Using JHipster in development]: https://jhipster.github.io/documentation-archive/v4.5.4/development/
-[Service Discovery and Configuration with the JHipster-Registry]: https://jhipster.github.io/documentation-archive/v4.5.4/microservices-architecture/#jhipster-registry
-[Using Docker and Docker-Compose]: https://jhipster.github.io/documentation-archive/v4.5.4/docker-compose
-[Using JHipster in production]: https://jhipster.github.io/documentation-archive/v4.5.4/production/
-[Running tests page]: https://jhipster.github.io/documentation-archive/v4.5.4/running-tests/
-[Setting up Continuous Integration]: https://jhipster.github.io/documentation-archive/v4.5.4/setting-up-ci/
-
-[Gatling]: http://gatling.io/
-[Node.js]: https://nodejs.org/
-[Yarn]: https://yarnpkg.org/
-[Webpack]: https://webpack.github.io/
-[Angular CLI]: https://cli.angular.io/
-[BrowserSync]: http://www.browsersync.io/
-[Karma]: http://karma-runner.github.io/
-[Jasmine]: http://jasmine.github.io/2.0/introduction.html
-[Protractor]: https://angular.github.io/protractor/
-[Leaflet]: http://leafletjs.com/
-[DefinitelyTyped]: http://definitelytyped.org/
+* [Gatling](http://gatling.io/)  
+* [Node.js](https://nodejs.org/)  
+* [Yarn](https://yarnpkg.org/)  
+* [Webpack](https://webpack.github.io/)  
+* [Angular CLI](https://cli.angular.io/)  
+* [BrowserSync](http://www.browsersync.io/)  
+* [Karma](http://karma-runner.github.io/)  
+* [Jasmine](http://jasmine.github.io/2.0/introduction.html)  
+* [Protractor](https://angular.github.io/protractor/)  
+* [Leaflet](http://leafletjs.com/)  
+* [DefinitelyTyped](http://definitelytyped.org/)  
