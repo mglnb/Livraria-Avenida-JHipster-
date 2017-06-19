@@ -99,6 +99,8 @@ Gostaria de instalar outros geradores disponiveis na `JHipster Marketplace` ?
 
 Após responder estas perguntas, ele irá começar a gerar o projeto.
 
+Logo então rode `git clone https://github.com/mglnb/Livraria-Avenida-JHipster.git` para clonar o projeto
+
 ## Rodando o projeto
 
 Para rodar o projeto no Windows, abra o Git Bash, vá até a pasta do projeto e digite
