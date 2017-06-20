@@ -3,7 +3,7 @@ JHipster é uma plataforma de desenvolvimento para geração, desenvolvimento e 
 
 ## Objetivos
 O JHipster tem como objetivo gerar uma aplicação web ou _microservice_ unindo: 
-* Java no _server-side_ com alta performance e robusto através do Spring Boot
+* Java no _server-side_ com alta performance através do Spring Boot
 * Um moderno, lustroso, _mobile-first_ _front-end_ com Angular e Bootstrap
 * Uma robusta arquitetura de _microservice_ com JHipster Registry, Netflix OSS, ELK Stack e Docker
 * Um poderoso fluxo de trabalho para compilar sua aplicação com Yeoman, Webpack/Gulp e Maven/Gradle
