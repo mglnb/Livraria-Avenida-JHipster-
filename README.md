@@ -99,7 +99,7 @@ Gostaria de instalar outros geradores disponiveis na `JHipster Marketplace` ?
 
 Após responder estas perguntas, ele irá começar a gerar o projeto.
 
-Logo então rode `git clone https://github.com/mglnb/Livraria-Avenida-JHipster.git` para clonar o projeto
+Logo então rode  para clonar o projeto
 
 ## Rodando o projeto
 
@@ -114,8 +114,20 @@ Assim irá rodar o _server-side_ do aplicativo, caso queira editar algum compont
 E deixe os dois servers rodando para fazer as modificações.
 
 
+## Rodando este projeto
 
+Primeiramente deveremos clonar este repositorio com `git clone https://github.com/mglnb/Livraria-Avenida-JHipster.git`
+Logo após clonar, para installar os arquivos necessários do framework rode
 
+    yarn install
+
+E então carregue as dependencias do maven através do git bash
+
+    ./mvnw
+   
+e quanto o servidor server-side estiver rodando, digite:
+
+    yarn start
 
 ## Informações Adicionais
 
