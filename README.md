@@ -1,3 +1,20 @@
+# JHipster
+JHipster é uma plataforma de desenvolvimento para geração, desenvolvimento e publicação de aplicativos web e _Spring microservices_ baseados nos frameworks [Spring Boot](http://projects.spring.io/spring-boot/) e [Angular](https://angularjs.org/)
+
+## Objetivos
+O JHipster tem como objetivo gerar uma aplicação web ou _microservice_ unindo: 
+* Java no _server-side_ com alta performance e robusto através do Spring Boot
+* Um moderno, lustroso, _mobile-first_ _front-end_ com Angular e Bootstrap
+* Uma robusta arquitetura de _microservice_ com JHipster Registry, Netflix OSS, ELK Stack e Docker
+* Um poderoso fluxo de trabalho para compilar sua aplicação com Yeoman, Webpack/Gulp e Maven/Gradle
+
+### Alguns links do JHipster
+
+[JHipster]( https://jhipster.github.io)  
+[JHipster 4.5.4](https://jhipster.github.io/documentation-archive/v4.5.4)
+
+[Introdução ao Framework JHipster - DevMedia](http://www.devmedia.com.br/introducao-ao-framework-jhipster/34043)
+
 # Livraria Avenida
 Essa aplicação foi gerada usando JHipster 4.5.4, voce pode encontrar a documentação e ajuda em [https://jhipster.github.io/documentation-archive/v4.5.4](https://jhipster.github.io/documentation-archive/v4.5.4).
 
@@ -129,12 +146,22 @@ e quanto o servidor server-side estiver rodando, digite:
 
     yarn start
 
+## Vantagens
+* Facilidade para iniciar o desenvolvimento.
+* Rapidez na compilação.
+* Browsersync para verificar as alterações no front-end sem precisar atualizar a pagina.
+* Varios modulos prontos para iniciar o desenvolvimento.
+* Diversas tecnologias com suporte padrão.
+* Internacionalização de uma maneira bem facil.
+* Geração de microservices.
+
+## Desvantagens
+* É uma tecnologia nova, portanto não tem tanta documentação brasileira na internet.
+* Caso não tenha noções basicas de Spring ou Angular, poderá ficar muito confuso ser gerado tudo junto.
+
 ## Informações Adicionais
 
-Alguns links do JHipster
-
-[JHipster]( https://jhipster.github.io)  
-[JHipster 4.5.4](https://jhipster.github.io/documentation-archive/v4.5.4)
+* [Video de configuração e instalação](https://www.youtube.com/watch?v=AVTfnMf_ghQ)
 
 [Usando JHipster para desenvolvimento](https://jhipster.github.io/documentation-archive/v4.5.4/development/)  
 [Usando Docker e Docker-Compose](https://jhipster.github.io/documentation-archive/v4.5.4/docker-compose)  
